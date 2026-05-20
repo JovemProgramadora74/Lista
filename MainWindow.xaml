@@ -5,5 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid />
+    <Grid>
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Left" Width="400">
+            <Label Content="Digite um nome: " />
+            <TextBox x:Name="tbNome" />
+            <Button Content="Adicionar nome na lista" Click="BtnAdicionaNome_OnClick" />
+        </StackPanel>
+        
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Right" Width="400">
+            <ListBox x:Name="lbNomes" ItemsSource="{Binding nomes}"/>
+        </StackPanel>
+    </Grid>
 </Window>
