@@ -10,10 +10,12 @@
             <Label Content="Digite um nome: " />
             <TextBox x:Name="tbNome" />
             <Button Content="Adicionar nome na lista" Click="BtnAdicionaNome_OnClick" />
+            <Button Content="Remover nome da lista" Click="BtnRemoveNome_OnClick" />
+            <Button Content="Encontrar nomes na lista" Click="BtnEncontrarNomes_OnClick" />
         </StackPanel>
         
-        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Right" Width="400">
-            <ListBox x:Name="lbNomes" ItemsSource="{Binding nomes}"/>
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Right" Width="360">
+            <ListBox x:Name="lbNomes" ItemsSource="{Binding nomes}" SelectionMode="Multiple"/>
         </StackPanel>
     </Grid>
 </Window>
